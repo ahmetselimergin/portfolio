@@ -1,0 +1,362 @@
+/* social icon's colors */
+.facebook{
+    color: #3b5998;
+}
+.twitter{
+    color:#1da1f2;
+}
+.instagram{
+    color:#631d76;
+}
+.github{
+    color:#333;
+}
+.linkedin{
+    color:#0077b5;
+}
+
+/* bg colors for hover change */
+.color-twitter {
+    background-color: #1da1f2 !important;
+  }
+  .color-facebook {
+    background-color: #3b5998 !important;
+  }
+  .color-instagram {
+    background-color: #631d76 !important;
+  }
+  .color-linkedin{
+      background-color: #0077b5 !important;
+  }
+  .color-github{
+    background-color:#333 !important;
+    color:#fff;
+  }
+  .change-bg{
+      background-color: #fff;
+      -webkit-transition: all .5s ease-out;
+      -moz-transition: all .5s ease-out;
+      -ms-transition: all .5s ease-out;
+      -o-transition: all .5s ease-out;
+      transition: all .5s ease-out;
+  }
+  .color-github,
+  .color-twitter,
+  .color-linkedin,
+  .color-facebook,
+  .color-instagram {
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  transition: all .5s ease-out;}
+
+.h1w{
+    color:#fff;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+}
+.h1c{
+    color:#343a40;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+}
+/* timeline stylles */
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #BD5D38;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: 0px;
+}
+
+/* Container around content */
+.times {
+    padding: 10px 40px;
+    position: relative;
+    max-height: 30vh;
+    background-color: inherit;
+    width: 100%;
+}
+
+/* The circles on the timeline */
+.times::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -15px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: -50%;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -10px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media all and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+  
+  /* Full-width containers */
+  .times {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .times::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+.timeline-height{
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+/*process */
+.progress{
+    height:100%;
+  max-width:1000px;
+  margin: 40px auto;
+}
+
+
+/* STYLES FOR PROGRESSBARS */
+
+.progress-radial, .progress-radial * {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+/* -------------------------------------
+ * Bar container
+ * ------------------------------------- */
+.progress-radial {
+  float: left;
+  margin-right: 4%;
+  position: relative;
+  width: 20%;
+  border-radius: 50%;
+}
+.progress-radial:first-child {
+  margin-left: 4%;
+}
+/* -------------------------------------
+ * Optional centered circle w/text
+ * ------------------------------------- */
+.progress-radial .overlay {
+  position: absolute;
+  width: 80%;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  font-size: 20px;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.progress-radial .overlay p{
+    position: absolute;
+    line-height: 40px;
+    text-align: center;
+    width: 100%;
+    top:50%;
+    margin-top: -20px;
+}
+
+/* -------------------------------------
+ * Mixin for progress-% class
+ * ------------------------------------- */
+.progress-0 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(0deg, #4A148C 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(90deg, #4A148C 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-5 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(342deg, #D50000 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(108deg, #D50000 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-10 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(324deg, #BF360C 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(126deg, #BF360C 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-15 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(306deg, #FF3D00 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(144deg, #FF3D00 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-20 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(288deg, #FF9100 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(162deg, #FF9100 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-25 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(270deg, #FFFF00 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(180deg, #FFFF00 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-30 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(252deg, #388E3C 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(198deg, #388E3C 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-35 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(234deg, #689F38 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(216deg, #689F38 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-40 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(216deg, #C0CA33 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(234deg, #C0CA33 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-45 {
+  background-image: -webkit-linear-gradient(0deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(198deg, #D4E157 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #f0f0f0 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(252deg, #D4E157 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-50 {
+  background-image: -webkit-linear-gradient(180deg, #00796B 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #00796B 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(-90deg, #00796B 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #00796B 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-55 {
+  background-image: -webkit-linear-gradient(162deg, #00BFA5 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #00BFA5 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(-72deg, #00BFA5 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #00BFA5 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-60 {
+  background-image: -webkit-linear-gradient(144deg, #64FFDA 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #64FFDA 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(-54deg, #64FFDA 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #64FFDA 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-65 {
+  background-image: -webkit-linear-gradient(126deg, #00B8D4 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #00B8D4 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(-36deg, #00B8D4 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #00B8D4 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-70 {
+  background-image: -webkit-linear-gradient(108deg, #00E5FF 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #00E5FF 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(-18deg, #00E5FF 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #00E5FF 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-75 {
+  background-image: -webkit-linear-gradient(90deg, #0091EA 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #0091EA 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(0deg, #0091EA 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #0091EA 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-80 {
+  background-image: -webkit-linear-gradient(72deg, #00B0FF 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #00B0FF 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(18deg, #00B0FF 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #00B0FF 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-85 {
+  background-image: -webkit-linear-gradient(54deg, #6200EA 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #6200EA 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(36deg, #6200EA 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #6200EA 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-90 {
+  background-image: -webkit-linear-gradient(36deg, #7C4DFF 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #7C4DFF 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(54deg, #7C4DFF 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #7C4DFF 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-95 {
+  background-image: -webkit-linear-gradient(18deg, #AA00FF 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #AA00FF 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(72deg, #AA00FF 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #AA00FF 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+.progress-100 {
+  background-image: -webkit-linear-gradient(0deg, #AB47BC 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #AB47BC 50%, #f0f0f0 50%, #f0f0f0);
+  background-image: linear-gradient(90deg, #AB47BC 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #AB47BC 50%, #f0f0f0 50%, #f0f0f0);
+}
+
+
